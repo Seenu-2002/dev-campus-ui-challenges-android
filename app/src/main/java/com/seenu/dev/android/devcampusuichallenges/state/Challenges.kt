@@ -13,5 +13,11 @@ val challenges = mapOf(
             name = "Challenge 1", // TODO: String Hardcoding
             route = Route.June
         )
+    ),
+    ChallengeMonth.JULY_2025 to listOf(
+        Challenge(
+            name = "Message Card", // TODO: String Hardcoding
+            route = Route.July
+        )
     )
 )

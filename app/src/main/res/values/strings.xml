@@ -2,4 +2,13 @@
     <string name="app_name">Dev Campus UI Challenges</string>
 
     <string name="june_2025">June 2025</string>
+    <string name="july_2025">July 2025</string>
+
+    <string name="july_2025_challenge_1_header">Message Card</string>
+
+    <!--    July 2025 Challenges-->
+    <string name="mark_as">Mark as %1$s</string>
+    <string name="sent">Sent</string>
+    <string name="delivered">Delivered</string>
+    <string name="read">Read</string>
 </resources>

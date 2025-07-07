@@ -9,4 +9,7 @@ sealed interface Route : NavKey {
     data object ListScreen : Route
     @Serializable
     data object June : Route
+
+    @Serializable
+    data object July : Route
 }

@@ -9,7 +9,7 @@ import androidx.compose.ui.unit.sp
 import com.seenu.dev.android.devcampusuichallenges.R
 
 // Set of Material typography styles to start with
-val Typography = Typography(
+val DefaultTypography = Typography(
     bodyLarge = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
