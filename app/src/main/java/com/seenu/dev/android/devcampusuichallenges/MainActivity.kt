@@ -9,6 +9,8 @@ import androidx.navigation3.runtime.entry
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
+import com.seenu.dev.android.devcampusuichallenges.july.BottomNavigationWithUnreadBadgesScreen
+import com.seenu.dev.android.devcampusuichallenges.july.EmojiReactionBubbleScreen
 import com.seenu.dev.android.devcampusuichallenges.july.MessageCardScreen
 import com.seenu.dev.android.devcampusuichallenges.june.BirthdayInviteCardScreen
 import com.seenu.dev.android.devcampusuichallenges.navigation.Route
@@ -34,6 +36,14 @@ class MainActivity : ComponentActivity() {
 
                     entry<Route.July> { entry ->
                         MessageCardScreen()
+                    }
+
+                    entry<Route.July2> { entry ->
+                        BottomNavigationWithUnreadBadgesScreen()
+                    }
+
+                    entry<Route.July3> { entry ->
+                        EmojiReactionBubbleScreen()
                     }
                 })
             }

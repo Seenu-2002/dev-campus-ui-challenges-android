@@ -1,12 +1,7 @@
 package com.seenu.dev.android.devcampusuichallenges.july
 
-import android.R.attr.fontFamily
-import android.R.attr.fontWeight
-import android.R.attr.text
-import android.R.id.message
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -15,16 +10,13 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -34,7 +26,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -43,18 +35,34 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.seenu.dev.android.devcampusuichallenges.R
+import com.seenu.dev.android.devcampusuichallenges.components.GradientScaffold
+import com.seenu.dev.android.devcampusuichallenges.july.theme.JulyTheme
+import com.seenu.dev.android.devcampusuichallenges.july.theme.Urbanist
+import com.seenu.dev.android.devcampusuichallenges.july.theme.backgroundGradientEnd
+import com.seenu.dev.android.devcampusuichallenges.july.theme.blue
+import com.seenu.dev.android.devcampusuichallenges.july.theme.onSurfaceAlt
+import com.seenu.dev.android.devcampusuichallenges.july.theme.surface50
 
 @Composable
 fun MessageCardScreen() {
     JulyTheme {
-        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+        GradientScaffold(
+            modifier = Modifier
+                .fillMaxSize(),
+            brush = Brush.verticalGradient(
+                colors = listOf(
+                    MaterialTheme.colorScheme.background,
+                    MaterialTheme.colorScheme.backgroundGradientEnd
+                )
+            )
+        ) { innerPadding ->
             Box(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(innerPadding)
             ) {
                 var selectedStatus by remember {
-                    mutableStateOf(Message.Status.READ)
+                    mutableStateOf(Message.Status.NONE)
                 }
 
                 MessageBubble(
@@ -79,9 +87,18 @@ fun MessageCardScreen() {
 @Composable
 private fun MessageBubblePreview() {
     JulyTheme {
-        Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.background)) {
+        Box(
+            modifier = Modifier.background(
+                brush = Brush.verticalGradient(
+                    colors = listOf(
+                        MaterialTheme.colorScheme.background,
+                        MaterialTheme.colorScheme.backgroundGradientEnd
+                    )
+                )
+            )
+        ) {
             (MessageBubble(
-                message = Message.DEFAULT
+                message = Message.DEFAULT.copy(status = Message.Status.READ),
             ))
         }
     }
@@ -140,10 +157,12 @@ fun MessageBubble(modifier: Modifier = Modifier, message: Message) {
                     color = MaterialTheme.colorScheme.onSurface.copy(alpha = .3F),
                 )
             }
+            val bottomPadding = if (message.status == Message.Status.NONE) 4.dp else 0.dp
             Text(
                 text = message.message,
                 modifier = Modifier
-                    .padding(horizontal = 8.dp),
+                    .padding(horizontal = 8.dp)
+                    .padding(bottom = bottomPadding),
                 fontSize = 16.sp,
                 fontFamily = Urbanist,
                 fontWeight = FontWeight.Normal,
@@ -160,25 +179,29 @@ fun MessageBubble(modifier: Modifier = Modifier, message: Message) {
                     Message.Status.SENT -> R.drawable.icon_unread to MaterialTheme.colorScheme.onSurfaceVariant
                     Message.Status.DELIVERED -> R.drawable.icon_read to MaterialTheme.colorScheme.onSurfaceVariant
                     Message.Status.READ -> R.drawable.icon_read to MaterialTheme.colorScheme.blue
+                    else -> R.drawable.icon_read to MaterialTheme.colorScheme.blue
                 }
 
-                Icon(
-                    painter = painterResource(id = icon),
-                    modifier = Modifier.size(16.dp),
-                    contentDescription = null,
-                    tint = tint
-                )
+                if (message.status != Message.Status.NONE) {
+                    Icon(
+                        painter = painterResource(id = icon),
+                        modifier = Modifier
+                            .size(16.dp)
+                            .align(Alignment.CenterVertically),
+                        contentDescription = null,
+                        tint = tint,
+                    )
 
-                Text(
-                    text = stringResource(message.status.stringRes),
-                    modifier = Modifier
-                        .padding(vertical = 4.dp)
-                        .padding(start = 2.dp),
-                    fontSize = 11.sp,
-                    fontFamily = Urbanist,
-                    fontWeight = FontWeight.SemiBold,
-                    color = tint
-                )
+                    Text(
+                        text = message.status.getLocalizedString(),
+                        modifier = Modifier
+                            .padding(start = 2.dp),
+                        fontSize = 11.sp,
+                        fontFamily = Urbanist,
+                        fontWeight = FontWeight.SemiBold,
+                        color = tint
+                    )
+                }
             }
         }
     }
@@ -194,16 +217,26 @@ data class Message constructor(
         val DEFAULT = Message(
             "DreamSyntaxHiker",
             "Iʼll send the draft tonight.I spent 9 months building what I thought would be a simple app to help people learn new languages through short conversations. I poured my evenings and weekends into it, but the launch was... underwhelming. ",
-            status = Message.Status.READ
+            status = Message.Status.NONE
         )
     }
 
-    enum class Status(@StringRes val stringRes: Int) {
-        SENT(R.string.sent),
-        DELIVERED(R.string.delivered),
-        READ(R.string.read)
+    enum class Status {
+        NONE,
+        SENT,
+        DELIVERED,
+        READ
     }
+}
 
+@Composable
+fun Message.Status.getLocalizedString(): String {
+    return when (this) {
+        Message.Status.NONE -> ""
+        Message.Status.SENT -> stringResource(R.string.sent)
+        Message.Status.DELIVERED -> stringResource(R.string.delivered)
+        Message.Status.READ -> stringResource(R.string.read)
+    }
 }
 
 @Composable
@@ -214,6 +247,10 @@ fun MessageStatusChanger(
 ) {
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
         for (entry in Message.Status.entries) {
+            if (entry == Message.Status.NONE) {
+                continue
+            }
+
             val iconRes = if (entry == Message.Status.SENT) {
                 R.drawable.icon_unread
             } else {
@@ -221,7 +258,7 @@ fun MessageStatusChanger(
             }
             MessageStatusRow(
                 icon = iconRes,
-                title = stringResource(entry.stringRes),
+                title = entry.getLocalizedString(),
                 isSelected = entry == selectedStatus,
                 modifier = Modifier
                     .fillMaxWidth(0.7F)
@@ -269,7 +306,7 @@ fun MessageStatusRow(
             )
             .padding(horizontal = 8.dp, vertical = 4.dp), contentAlignment = Alignment.Center
     ) {
-        Row {
+        Row(verticalAlignment = Alignment.CenterVertically) {
 
             Icon(
                 painter = painterResource(id = icon),

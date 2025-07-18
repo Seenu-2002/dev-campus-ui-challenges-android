@@ -10,14 +10,22 @@ data class Challenge(
 val challenges = mapOf(
     ChallengeMonth.JUNE_2025 to listOf(
         Challenge(
-            name = "Challenge 1", // TODO: String Hardcoding
+            name = "Challenge 1",
             route = Route.June
         )
     ),
     ChallengeMonth.JULY_2025 to listOf(
         Challenge(
-            name = "Message Card", // TODO: String Hardcoding
+            name = "Message Card",
             route = Route.July
+        ),
+        Challenge(
+            name = "Bottom Navigation with Unread badges",
+            route = Route.July2
+        ),
+        Challenge(
+            name = "Emoji Reaction Bubble",
+            route = Route.July3
         )
     )
 )
