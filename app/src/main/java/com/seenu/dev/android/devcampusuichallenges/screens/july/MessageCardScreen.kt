@@ -1,7 +1,6 @@
-package com.seenu.dev.android.devcampusuichallenges.july
+package com.seenu.dev.android.devcampusuichallenges.screens.july
 
 import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -10,13 +9,11 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -36,12 +33,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.seenu.dev.android.devcampusuichallenges.R
 import com.seenu.dev.android.devcampusuichallenges.components.GradientScaffold
-import com.seenu.dev.android.devcampusuichallenges.july.theme.JulyTheme
-import com.seenu.dev.android.devcampusuichallenges.july.theme.Urbanist
-import com.seenu.dev.android.devcampusuichallenges.july.theme.backgroundGradientEnd
-import com.seenu.dev.android.devcampusuichallenges.july.theme.blue
-import com.seenu.dev.android.devcampusuichallenges.july.theme.onSurfaceAlt
-import com.seenu.dev.android.devcampusuichallenges.july.theme.surface50
+import com.seenu.dev.android.devcampusuichallenges.screens.july.theme.JulyTheme
+import com.seenu.dev.android.devcampusuichallenges.screens.july.theme.Urbanist
+import com.seenu.dev.android.devcampusuichallenges.screens.july.theme.backgroundGradientEnd
+import com.seenu.dev.android.devcampusuichallenges.screens.july.theme.blue
+import com.seenu.dev.android.devcampusuichallenges.screens.july.theme.onSurfaceAlt
+import com.seenu.dev.android.devcampusuichallenges.screens.july.theme.surface50
 
 @Composable
 fun MessageCardScreen() {
@@ -217,7 +214,7 @@ data class Message constructor(
         val DEFAULT = Message(
             "DreamSyntaxHiker",
             "Iʼll send the draft tonight.I spent 9 months building what I thought would be a simple app to help people learn new languages through short conversations. I poured my evenings and weekends into it, but the launch was... underwhelming. ",
-            status = Message.Status.NONE
+            status = Status.NONE
         )
     }
 

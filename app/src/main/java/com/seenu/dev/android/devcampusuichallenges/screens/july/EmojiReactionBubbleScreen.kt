@@ -1,12 +1,9 @@
-package com.seenu.dev.android.devcampusuichallenges.july
+package com.seenu.dev.android.devcampusuichallenges.screens.july
 
-import android.R.attr.fontFamily
-import android.R.attr.text
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.FlowRow
@@ -27,12 +24,12 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.seenu.dev.android.devcampusuichallenges.july.theme.JulyTheme
-import com.seenu.dev.android.devcampusuichallenges.july.theme.Urbanist
-import com.seenu.dev.android.devcampusuichallenges.july.theme.backgroundGradientEnd
-import com.seenu.dev.android.devcampusuichallenges.july.theme.blue12
-import com.seenu.dev.android.devcampusuichallenges.july.theme.surface30
-import com.seenu.dev.android.devcampusuichallenges.july.theme.surface50
+import com.seenu.dev.android.devcampusuichallenges.screens.july.theme.JulyTheme
+import com.seenu.dev.android.devcampusuichallenges.screens.july.theme.Urbanist
+import com.seenu.dev.android.devcampusuichallenges.screens.july.theme.backgroundGradientEnd
+import com.seenu.dev.android.devcampusuichallenges.screens.july.theme.blue12
+import com.seenu.dev.android.devcampusuichallenges.screens.july.theme.surface30
+import com.seenu.dev.android.devcampusuichallenges.screens.july.theme.surface50
 
 @Composable
 fun EmojiReactionBubbleScreen() {

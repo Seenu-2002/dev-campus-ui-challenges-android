@@ -3,8 +3,11 @@
 
     <string name="june_2025">June 2025</string>
     <string name="july_2025">July 2025</string>
+    <string name="august_2025">August 2025</string>
 
     <string name="july_2025_challenge_1_header">Message Card</string>
+
+    <string name="august_2025_challenge_1_header">Thermometer Treck</string>
 
     <!--    July 2025 Challenges-->
     <string name="mark_as">Mark as %1$s</string>
@@ -17,4 +20,14 @@
     <string name="chats">Chats</string>
     <string name="settings">Settings</string>
     <string name="mark_as_read">Mark as Read</string>
+
+    <!--    August 2025 Challenges-->
+    <string name="thermometer_treck_title">Thermometer Treck</string>
+    <string name="thermometer_trek_description">Please Start to begin tracking temperature</string>
+    <string name="label_start">Start</string>
+    <string name="label_tracking">Tracking…</string>
+    <string name="label_reset">Reset</string>
+    <string name="thermometer_treck_reading_counter">%1$s/%2$s</string>
+    <string name="temperature_in_fahrenheit">%1$s °F</string>
+
 </resources>

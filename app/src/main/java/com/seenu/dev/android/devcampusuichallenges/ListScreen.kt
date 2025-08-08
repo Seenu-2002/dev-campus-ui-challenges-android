@@ -8,18 +8,23 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Face
+import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.getValue
@@ -43,13 +48,17 @@ import com.seenu.dev.android.devcampusuichallenges.ui.theme.DevCampusUIChallenge
 fun ListScreen(onChallengeSelected: (Challenge) -> Unit) {
 
     var selectedMonth by rememberSaveable {
-        mutableStateOf(ChallengeMonth.JULY_2025)
+        mutableStateOf(ChallengeMonth.AUGUST_2025)
     }
 
     var challengeList by remember(selectedMonth) {
         mutableStateOf(challenges[selectedMonth] ?: emptyList())
     }
 
+    var showMonthChooserBottomSheet by remember {
+        mutableStateOf(false)
+    }
+    val bottomSheetState = rememberModalBottomSheetState()
     Scaffold(modifier = Modifier.fillMaxSize(), topBar = {
         CenterAlignedTopAppBar(
             title = {
@@ -67,7 +76,9 @@ fun ListScreen(onChallengeSelected: (Challenge) -> Unit) {
                 .padding(padding)
         ) {
             Row(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().clickable {
+                    showMonthChooserBottomSheet = true
+                },
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
@@ -101,6 +112,21 @@ fun ListScreen(onChallengeSelected: (Challenge) -> Unit) {
                         challenge = challenge
                     )
                 }
+            }
+        }
+
+        if (showMonthChooserBottomSheet) {
+            ModalBottomSheet(onDismissRequest = {
+                showMonthChooserBottomSheet = false
+            }, sheetState = bottomSheetState) {
+                MonthChooserBottomSheetContent(
+                    selectedMonth = selectedMonth,
+                    onMonthSelected = { month ->
+                        selectedMonth = month
+                        challengeList = challenges[month] ?: emptyList()
+                        showMonthChooserBottomSheet = false
+                    }
+                )
             }
         }
     }
@@ -155,4 +181,54 @@ private fun ChallengeRowPreview() {
             challenge = challenge
         )
     }
+}
+
+@Preview
+@Composable
+private fun MonthChooserBottomSheetContentPreview() {
+    MonthChooserBottomSheetContent(onMonthSelected = {
+
+    })
+}
+
+@Composable
+fun MonthChooserBottomSheetContent(
+    modifier: Modifier = Modifier,
+    selectedMonth: ChallengeMonth = ChallengeMonth.JUNE_2025,
+    onMonthSelected: (ChallengeMonth) -> Unit = {}
+) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp)
+    ) {
+        for (month in challenges.keys) {
+            Row(
+                modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 8.dp)
+                    .clickable(selectedMonth != month) {
+                        onMonthSelected(month)
+                    },
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = stringResource(month.stringRes),
+                    modifier = Modifier
+                        .padding(vertical = 8.dp),
+                    style = MaterialTheme.typography.bodyLarge
+                )
+
+                if (month == selectedMonth) {
+                    Icon(
+                        imageVector = Icons.Rounded.Check,
+                        contentDescription = "Selected Month",
+                        modifier = Modifier.padding(8.dp)
+                    )
+                }
+            }
+        }
+    }
+
 }

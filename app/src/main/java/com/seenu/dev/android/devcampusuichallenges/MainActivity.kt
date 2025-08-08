@@ -9,11 +9,13 @@ import androidx.navigation3.runtime.entry
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
-import com.seenu.dev.android.devcampusuichallenges.july.BottomNavigationWithUnreadBadgesScreen
-import com.seenu.dev.android.devcampusuichallenges.july.EmojiReactionBubbleScreen
-import com.seenu.dev.android.devcampusuichallenges.july.MessageCardScreen
-import com.seenu.dev.android.devcampusuichallenges.june.BirthdayInviteCardScreen
+import com.seenu.dev.android.devcampusuichallenges.screens.july.BottomNavigationWithUnreadBadgesScreen
+import com.seenu.dev.android.devcampusuichallenges.screens.july.EmojiReactionBubbleScreen
+import com.seenu.dev.android.devcampusuichallenges.screens.july.MessageCardScreen
+import com.seenu.dev.android.devcampusuichallenges.screens.june.BirthdayInviteCardScreen
 import com.seenu.dev.android.devcampusuichallenges.navigation.Route
+import com.seenu.dev.android.devcampusuichallenges.screens.august.ThermometerTreckScreen
+import com.seenu.dev.android.devcampusuichallenges.screens.august.theme.AugustTheme
 import com.seenu.dev.android.devcampusuichallenges.ui.theme.DevCampusUIChallengesTheme
 
 class MainActivity : ComponentActivity() {
@@ -44,6 +46,10 @@ class MainActivity : ComponentActivity() {
 
                     entry<Route.July3> { entry ->
                         EmojiReactionBubbleScreen()
+                    }
+
+                    entry<Route.August1> { entry ->
+                        AugustTheme { ThermometerTreckScreen() }
                     }
                 })
             }

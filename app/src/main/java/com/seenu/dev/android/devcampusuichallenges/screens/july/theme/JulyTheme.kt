@@ -1,4 +1,4 @@
-package com.seenu.dev.android.devcampusuichallenges.july.theme
+package com.seenu.dev.android.devcampusuichallenges.screens.july.theme
 
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme

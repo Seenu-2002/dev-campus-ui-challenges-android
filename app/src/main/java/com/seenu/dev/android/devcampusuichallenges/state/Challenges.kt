@@ -27,5 +27,11 @@ val challenges = mapOf(
             name = "Emoji Reaction Bubble",
             route = Route.July3
         )
-    )
+    ),
+    ChallengeMonth.AUGUST_2025 to listOf(
+        Challenge(
+            name = "Temperature Trek",
+            route = Route.August1
+        )
+    ),
 )
