@@ -19,6 +19,7 @@ val OnSurfaceVariant = Color(0xFFAFB2B9)
 val OnSurfaceAlt = Color(0xFF0F0F18)
 val Blue = Color(0xFF68C3FF)
 val SurfaceAlt30 = Color(0x4DFFFFFF)
+val SurfaceAlt15 = Color(0x26FFFFFF)
 val Error = Color(0xFFF83468)
 val BackgroundGradientEnd = Color(0xFF0F1318)
 val Blue12 = Color(0x1F68C3FF)
@@ -28,6 +29,8 @@ val ColorScheme.onSurfaceAlt
 
 val ColorScheme.surfaceAlt30
     @Composable get() = SurfaceAlt30
+val ColorScheme.surfaceAlt15
+    @Composable get() = SurfaceAlt15
 
 val ColorScheme.blue
     @Composable get() = Blue
