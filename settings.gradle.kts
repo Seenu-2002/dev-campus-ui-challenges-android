@@ -19,6 +19,11 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Dev Campus UI Challenges"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+rootProject.name = "dev-campus-ui-challenges"
 include(":app")
- 
+include(":september25")
+include(":june25")
+include(":july25")
+include(":august25")

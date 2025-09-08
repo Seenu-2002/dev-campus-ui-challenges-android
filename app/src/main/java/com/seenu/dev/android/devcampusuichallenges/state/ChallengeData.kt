@@ -1,0 +1,22 @@
+package com.seenu.dev.android.devcampusuichallenges.state
+
+import androidx.compose.runtime.Composable
+import com.seenu.dev.android.devcampusuichallenges.navigation.Route
+
+
+val months
+    get() = listOf(
+        MonthUiModel(
+            "September 2025",
+            "Designing the Festival",
+            septemberChallenges
+        )
+    )
+
+private val septemberChallenges
+    get() = listOf(
+        ChallengeUiModel(
+            "Expandable Lineup List",
+            Route.September1
+        )
+    )

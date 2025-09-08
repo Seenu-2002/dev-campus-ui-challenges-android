@@ -9,14 +9,17 @@ import androidx.navigation3.runtime.entry
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
-import com.seenu.dev.android.devcampusuichallenges.screens.july.BottomNavigationWithUnreadBadgesScreen
-import com.seenu.dev.android.devcampusuichallenges.screens.july.EmojiReactionBubbleScreen
-import com.seenu.dev.android.devcampusuichallenges.screens.july.MessageCardScreen
-import com.seenu.dev.android.devcampusuichallenges.screens.june.BirthdayInviteCardScreen
+import com.seenu.dev.android.august25.screens.OrderQueueOutpostScreen
+import com.seenu.dev.android.august25.screens.ThermometerTreckScreen
+import com.seenu.dev.android.august25.theme.AugustTheme
 import com.seenu.dev.android.devcampusuichallenges.navigation.Route
-import com.seenu.dev.android.devcampusuichallenges.screens.august.ThermometerTreckScreen
-import com.seenu.dev.android.devcampusuichallenges.screens.august.theme.AugustTheme
+import com.seenu.dev.android.devcampusuichallenges.state.months
 import com.seenu.dev.android.devcampusuichallenges.ui.theme.DevCampusUIChallengesTheme
+import com.seenu.dev.android.july25.BottomNavigationWithUnreadBadgesScreen
+import com.seenu.dev.android.july25.EmojiReactionBubbleScreen
+import com.seenu.dev.android.july25.MessageCardScreen
+import com.seenu.dev.android.june25.BirthdayInviteCardScreen
+import com.seenu.dev.android.september25.ExpandableListScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,9 +30,11 @@ class MainActivity : ComponentActivity() {
             DevCampusUIChallengesTheme {
                 NavDisplay(backStack = backstack, entryProvider = entryProvider<NavKey> {
                     entry<Route.ListScreen> {
-                        ListScreen(onChallengeSelected = { challenge ->
+                        LauncherScreen(
+                            months = months
+                        ) { challenge ->
                             backstack.add(challenge.route)
-                        })
+                        }
                     }
 
                     entry<Route.June> { entry ->
@@ -50,6 +55,14 @@ class MainActivity : ComponentActivity() {
 
                     entry<Route.August1> { entry ->
                         AugustTheme { ThermometerTreckScreen() }
+                    }
+
+                    entry<Route.August2> { entry ->
+                        AugustTheme { OrderQueueOutpostScreen() }
+                    }
+
+                    entry<Route.September1> { _ ->
+                        ExpandableListScreen()
                     }
                 })
             }

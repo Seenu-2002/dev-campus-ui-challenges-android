@@ -34,14 +34,3 @@ val DefaultTypography = Typography(
     )
     */
 )
-
-val Nunito = FontFamily(
-    Font(R.font.nunito_regular, FontWeight.Normal),
-    Font(R.font.nunito_bold, FontWeight.Bold),
-    Font(R.font.nunito_semibold, FontWeight.SemiBold)
-)
-val Mali = FontFamily(
-    Font(R.font.mali_regular, FontWeight.Normal),
-    Font(R.font.mali_bold, FontWeight.Bold),
-    Font(R.font.mali_semibold, FontWeight.SemiBold)
-)

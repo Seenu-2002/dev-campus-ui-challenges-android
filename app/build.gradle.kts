@@ -52,6 +52,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.animation.core)
+    implementation(libs.androidx.ui.text)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -67,4 +69,10 @@ dependencies {
 
     // Compose Constraint layout
     implementation(libs.androidx.constraintlayout.compose)
+
+    // Modules
+    implementation(projects.june25)
+    implementation(projects.july25)
+    implementation(projects.august25)
+    implementation(projects.september25)
 }

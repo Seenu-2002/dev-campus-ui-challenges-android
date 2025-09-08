@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="thermometer_treck_title">Thermometer Treck</string>
+    <string name="thermometer_trek_description">Please Start to begin tracking temperature</string>
+    <string name="label_start">Start</string>
+    <string name="label_tracking">Tracking…</string>
+    <string name="label_reset">Reset</string>
+    <string name="thermometer_treck_reading_counter">%1$s/%2$s</string>
+    <string name="temperature_in_fahrenheit">%1$s °F</string>
+    <string name="order_queue_outpost_title">Order Queue Outpost</string>
+    <string name="order_queue_outpost_description">Press Play to start processing orders.</string>
+    <string name="queue_with_item_count">Queue: %1$s/%2$s</string>
+    <string name="label_pause">Pause</string>
+    <string name="label_resume">Resume</string>
+    <string name="percentage_100">100%</string>
+</resources>

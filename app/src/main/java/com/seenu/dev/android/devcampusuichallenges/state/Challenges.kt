@@ -30,8 +30,12 @@ val challenges = mapOf(
     ),
     ChallengeMonth.AUGUST_2025 to listOf(
         Challenge(
-            name = "Temperature Trek",
+            name = "Temperature Treck",
             route = Route.August1
+        ),
+        Challenge(
+            name = "Order Queue Outpost",
+            route = Route.August2
         )
     ),
 )
