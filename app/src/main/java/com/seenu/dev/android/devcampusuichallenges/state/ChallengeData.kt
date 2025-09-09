@@ -18,5 +18,9 @@ private val septemberChallenges
         ChallengeUiModel(
             "Expandable Lineup List",
             Route.September1
-        )
+        ),
+        ChallengeUiModel(
+            "Ticket Builder",
+            Route.September2
+        ),
     )

@@ -54,8 +54,10 @@ import kotlinx.serialization.Serializable
 @Preview
 @Composable
 fun ExpandableListScreenPreview() {
-    Surface {
-        ExpandableListScreen()
+    SeptemberTheme {
+        Surface {
+            ExpandableListScreen()
+        }
     }
 }
 

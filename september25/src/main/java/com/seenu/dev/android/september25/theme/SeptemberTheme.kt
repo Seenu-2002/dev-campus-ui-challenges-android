@@ -15,17 +15,25 @@ import androidx.core.view.WindowCompat
 import com.seenu.dev.android.september25.R
 
 val Surface = Color(0xFFFFFFF0)
+val SurfaceHigher = Color(0xFFFCF3E2)
 val TextPrimary = Color(0xFF421E17)
 val TextSecondary = Color(0xFF786B68)
+val TextDisabled = Color(0xFFA99E9C)
 val Lime = Color(0xFFE0E270)
 val Orange = Color(0xFFEC9C50)
 val Pink = Color(0xFFF59BB0)
+
+val ColorScheme.surfaceHigher
+    @Composable get() = SurfaceHigher
 
 val ColorScheme.textPrimary
     @Composable get() = TextPrimary
 
 val ColorScheme.textSecondary
     @Composable get() = TextSecondary
+
+val ColorScheme.textDisabled
+    @Composable get() = TextDisabled
 
 val ColorScheme.lime
     @Composable get() = Lime
@@ -52,10 +60,11 @@ fun SeptemberTheme(content: @Composable () -> Unit) {
         ),
         typography = Typography()
     ) {
-        val activity = LocalActivity.current ?: return@MaterialTheme
-        val view = LocalView.current
-        WindowCompat.getInsetsController(activity.window, view).isAppearanceLightStatusBars = true
-        WindowCompat.getInsetsController(activity.window, view).isAppearanceLightNavigationBars = true
+        LocalActivity.current?.let { activity ->
+            val view = LocalView.current
+            WindowCompat.getInsetsController(activity.window, view).isAppearanceLightStatusBars = true
+            WindowCompat.getInsetsController(activity.window, view).isAppearanceLightNavigationBars = true
+        }
         content()
     }
 }

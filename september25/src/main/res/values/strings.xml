@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  Festival Lineup  -->
     <string name="festival_lineup">Festival Lineup</string>
     <string name="festival_lineup_subtitle">Tap a stage to view performers</string>
     <string name="stage_a">Stage A</string>
@@ -21,5 +22,16 @@
     <string name="stage_c_performer_1_time">16:00</string>
     <string name="stage_c_performer_2">The 1975</string>
     <string name="stage_c_performer_2_time">17:15</string>
+
+    <!--  Ticket Builder  -->
+    <string name="ticket_builder">Ticket Builder</string>
+    <string name="ticket_builder_subtitle">Select Ticket Type &amp; Quantity</string>
+    <string name="ticket_type">Ticket Type:</string>
+    <string name="type_standard">Standard</string>
+    <string name="type_vip">VIP</string>
+    <string name="type_backstage">Backstage</string>
+    <string name="quantity">Quantity:</string>
+    <string name="total">Total:</string>
+    <string name="purchase">Purchase</string>
 
 </resources>
