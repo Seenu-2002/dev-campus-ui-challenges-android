@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.material3.Surface
 import androidx.navigation3.runtime.NavKey
 import androidx.navigation3.runtime.entry
 import androidx.navigation3.runtime.entryProvider
@@ -20,6 +21,7 @@ import com.seenu.dev.android.july25.EmojiReactionBubbleScreen
 import com.seenu.dev.android.july25.MessageCardScreen
 import com.seenu.dev.android.june25.BirthdayInviteCardScreen
 import com.seenu.dev.android.september25.ExpandableListScreen
+import com.seenu.dev.android.september25.theme.SeptemberTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,7 +64,11 @@ class MainActivity : ComponentActivity() {
                     }
 
                     entry<Route.September1> { _ ->
-                        ExpandableListScreen()
+                        SeptemberTheme {
+                            Surface {
+                                ExpandableListScreen()
+                            }
+                        }
                     }
                 })
             }

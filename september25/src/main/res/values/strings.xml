@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="festival_lineup">Festival Lineup</string>
+    <string name="festival_lineup_subtitle">Tap a stage to view performers</string>
+    <string name="stage_a">Stage A</string>
+    <string name="stage_b">Stage B</string>
+    <string name="stage_c">Stage C</string>
+    <string name="stage_a_performer_1">Morning Bloom</string>
+    <string name="stage_a_performer_1_time">11:00</string>
+    <string name="stage_a_performer_2">Synth River</string>
+    <string name="stage_a_performer_2_time">12:30</string>
+
+    <string name="stage_b_performer_1">The Suntones</string>
+    <string name="stage_b_performer_1_time">13:00</string>
+    <string name="stage_b_performer_2">Blue Voltage</string>
+    <string name="stage_b_performer_2_time">14:15</string>
+    <string name="stage_b_performer_3">Midnight Echo</string>
+    <string name="stage_b_performer_3_time">15:30</string>
+
+    <string name="stage_c_performer_1">Echo Machine</string>
+    <string name="stage_c_performer_1_time">16:00</string>
+    <string name="stage_c_performer_2">The 1975</string>
+    <string name="stage_c_performer_2_time">17:15</string>
+
+</resources>
