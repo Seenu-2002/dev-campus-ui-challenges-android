@@ -34,4 +34,10 @@
     <string name="total">Total:</string>
     <string name="purchase">Purchase</string>
 
+    <!--  Festival Map  -->
+    <string name="festival_map">Festival Map</string>
+    <string name="stages">Stages</string>
+    <string name="food">Food</string>
+    <string name="wc">WC</string>
+
 </resources>

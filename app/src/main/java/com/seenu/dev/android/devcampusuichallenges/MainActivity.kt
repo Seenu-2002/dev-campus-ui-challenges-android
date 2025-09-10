@@ -21,6 +21,8 @@ import com.seenu.dev.android.july25.EmojiReactionBubbleScreen
 import com.seenu.dev.android.july25.MessageCardScreen
 import com.seenu.dev.android.june25.BirthdayInviteCardScreen
 import com.seenu.dev.android.september25.ExpandableListScreen
+import com.seenu.dev.android.september25.FestivalMap
+import com.seenu.dev.android.september25.MapChipFilterScreen
 import com.seenu.dev.android.september25.TicketBuilderScreen
 import com.seenu.dev.android.september25.theme.SeptemberTheme
 
@@ -72,10 +74,18 @@ class MainActivity : ComponentActivity() {
                         }
                     }
 
-                    entry<Route.September2> { _ ->
+                    entry<Route.September2> {
                         SeptemberTheme {
                             Surface {
                                 TicketBuilderScreen()
+                            }
+                        }
+                    }
+
+                    entry<Route.September3> {
+                        SeptemberTheme {
+                            Surface {
+                                MapChipFilterScreen()
                             }
                         }
                     }

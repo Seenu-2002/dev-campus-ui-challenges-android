@@ -23,4 +23,8 @@ private val septemberChallenges
             "Ticket Builder",
             Route.September2
         ),
+        ChallengeUiModel(
+            "Festival Map",
+            Route.September3
+        ),
     )
