@@ -1,7 +1,5 @@
 package com.seenu.dev.android.september25
 
-import android.R.attr.x
-import android.R.attr.y
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.animation.AnimatedVisibility
@@ -39,8 +37,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onGloballyPositioned
@@ -52,10 +48,8 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.util.fastRoundToInt
 import com.seenu.dev.android.september25.theme.Parkinsans
 import com.seenu.dev.android.september25.theme.SeptemberTheme
-import com.seenu.dev.android.september25.theme.Surface
 import com.seenu.dev.android.september25.theme.lime
 import com.seenu.dev.android.september25.theme.orange
 import com.seenu.dev.android.september25.theme.pink

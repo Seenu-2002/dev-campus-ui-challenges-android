@@ -40,4 +40,64 @@
     <string name="food">Food</string>
     <string name="wc">WC</string>
 
+    <!--  Accessible Audio Schedule   -->
+    <string name="schedule">Schedule</string>
+    <string name="time_and_stage_format">%1$s • %2$s</string>
+    <string name="artist_1">Bon Iver</string>
+    <string name="artist_1_time">15:30</string>
+    <string name="artist_1_stage">Main Stage</string>
+    <string name="artist_1_desc">Atmospheric folk-electronic set to start the day.</string>
+
+    <string name="artist_2">Jamie xx</string>
+    <string name="artist_2_time">16:00</string>
+    <string name="artist_2_stage">Electro Stage</string>
+    <string name="artist_2_desc">A genre-bending solo set with deep bass and light textures.</string>
+
+    <string name="artist_3">Florence + The Machine</string>
+    <string name="artist_3_time">17:00</string>
+    <string name="artist_3_stage">Main Stage</string>
+    <string name="artist_3_desc">Special acoustic set this evening only.</string>
+
+    <string name="artist_4">The National</string>
+    <string name="artist_4_time">18:00</string>
+    <string name="artist_4_stage">Sunset Stage</string>
+    <string name="artist_4_desc">Known for their emotional rock anthems.</string>
+
+    <string name="artist_5">Björk</string>
+    <string name="artist_5_time">18:30</string>
+    <string name="artist_5_stage">Electro Stage</string>
+    <string name="artist_5_desc">Avant-garde visual and vocal per formance.</string>
+
+    <string name="artist_6">Tame Impala</string>
+    <string name="artist_6_time">20:15</string>
+    <string name="artist_6_stage">Sunset Stage</string>
+    <string name="artist_6_desc">Celebrated psychedelic show from Australia.</string>
+
+    <string name="artist_7">The Chemical Brothers</string>
+    <string name="artist_7_time">20:15</string>
+    <string name="artist_7_stage">Electro Stage</string>
+    <string name="artist_7_desc">High-energy visuals with legendary electronica.</string>
+
+    <string name="artist_8">Foo Fighters</string>
+    <string name="artist_8_time">21:00</string>
+    <string name="artist_8_stage">Main Stage</string>
+    <string name="artist_8_desc">Classic stadium rock at its finest.</string>
+
+    <string name="artist_9">Arctic Monkeys</string>
+    <string name="artist_9_time">22:00</string>
+    <string name="artist_9_stage">Sunset Stage</string>
+    <string name="artist_9_desc">Charismatic blend of indie rock and post-punk revival.</string>
+
+    <string name="artist_10">Radiohead</string>
+    <string name="artist_10_time">23:00</string>
+    <string name="artist_10_stage">Main Stage</string>
+    <string name="artist_10_desc">Returning to t he stage wit h a new album.</string>
+
+    <string name="type_indie">Indie</string>
+    <string name="type_electronic">Electronic</string>
+    <string name="type_headliner">Headliner</string>
+    <string name="type_experimental">Experimental</string>
+    <string name="type_alt_rock">Alt Rock</string>
+    <string name="accessibility_card_format">Genre %1$s, Artist %2$s, Time %3$s at %4$s. %5$s</string>
+
 </resources>

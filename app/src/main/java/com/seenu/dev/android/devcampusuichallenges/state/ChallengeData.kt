@@ -27,4 +27,8 @@ private val septemberChallenges
             "Festival Map",
             Route.September3
         ),
+        ChallengeUiModel(
+            "Accessible Audio Schedule",
+            Route.September4
+        ),
     )

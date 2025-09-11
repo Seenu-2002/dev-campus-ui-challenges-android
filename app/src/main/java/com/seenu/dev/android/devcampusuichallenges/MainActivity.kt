@@ -20,6 +20,7 @@ import com.seenu.dev.android.july25.BottomNavigationWithUnreadBadgesScreen
 import com.seenu.dev.android.july25.EmojiReactionBubbleScreen
 import com.seenu.dev.android.july25.MessageCardScreen
 import com.seenu.dev.android.june25.BirthdayInviteCardScreen
+import com.seenu.dev.android.september25.AccessibleAudioSchedule
 import com.seenu.dev.android.september25.ExpandableListScreen
 import com.seenu.dev.android.september25.FestivalMap
 import com.seenu.dev.android.september25.MapChipFilterScreen
@@ -86,6 +87,14 @@ class MainActivity : ComponentActivity() {
                         SeptemberTheme {
                             Surface {
                                 MapChipFilterScreen()
+                            }
+                        }
+                    }
+
+                    entry<Route.September4> {
+                        SeptemberTheme {
+                            Surface {
+                                AccessibleAudioSchedule()
                             }
                         }
                     }

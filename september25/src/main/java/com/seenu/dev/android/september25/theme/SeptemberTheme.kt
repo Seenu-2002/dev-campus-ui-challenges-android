@@ -5,7 +5,6 @@ import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.text.font.Font
@@ -22,6 +21,8 @@ val TextDisabled = Color(0xFFA99E9C)
 val Lime = Color(0xFFE0E270)
 val Orange = Color(0xFFEC9C50)
 val Pink = Color(0xFFF59BB0)
+val Purple = Color(0xFFEEB7FA)
+val Blue = Color(0xFF86DDF8)
 
 val ColorScheme.surfaceHigher
     @Composable get() = SurfaceHigher
@@ -44,6 +45,12 @@ val ColorScheme.orange
 val ColorScheme.pink
     @Composable get() = Pink
 
+val ColorScheme.purple
+    @Composable get() = Purple
+
+val ColorScheme.blue
+    @Composable get() = Blue
+
 val Parkinsans = FontFamily(
     Font(R.font.parkinsans_regular, weight = FontWeight.Normal),
     Font(R.font.parkinsans_medium, weight = FontWeight.Medium),
@@ -63,7 +70,10 @@ fun SeptemberTheme(content: @Composable () -> Unit) {
         LocalActivity.current?.let { activity ->
             val view = LocalView.current
             WindowCompat.getInsetsController(activity.window, view).isAppearanceLightStatusBars = true
-            WindowCompat.getInsetsController(activity.window, view).isAppearanceLightNavigationBars = true
+            WindowCompat.getInsetsController(
+                activity.window,
+                view
+            ).isAppearanceLightNavigationBars = true
         }
         content()
     }
