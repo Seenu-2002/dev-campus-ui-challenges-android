@@ -24,6 +24,7 @@ import com.seenu.dev.android.september25.AccessibleAudioSchedule
 import com.seenu.dev.android.september25.ExpandableListScreen
 import com.seenu.dev.android.september25.FestivalMap
 import com.seenu.dev.android.september25.MapChipFilterScreen
+import com.seenu.dev.android.september25.MultiStageTimelineScreen
 import com.seenu.dev.android.september25.TicketBuilderScreen
 import com.seenu.dev.android.september25.theme.SeptemberTheme
 
@@ -32,7 +33,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            val backstack = rememberNavBackStack<Route>(Route.ListScreen)
+            val backstack = rememberNavBackStack<Route>(Route.September5)
             DevCampusUIChallengesTheme {
                 NavDisplay(backStack = backstack, entryProvider = entryProvider<NavKey> {
                     entry<Route.ListScreen> {
@@ -95,6 +96,14 @@ class MainActivity : ComponentActivity() {
                         SeptemberTheme {
                             Surface {
                                 AccessibleAudioSchedule()
+                            }
+                        }
+                    }
+
+                    entry<Route.September5> {
+                        SeptemberTheme {
+                            Surface {
+                                MultiStageTimelineScreen()
                             }
                         }
                     }

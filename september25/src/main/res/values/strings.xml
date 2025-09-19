@@ -100,4 +100,9 @@
     <string name="type_alt_rock">Alt Rock</string>
     <string name="accessibility_card_format">Genre %1$s, Artist %2$s, Time %3$s at %4$s. %5$s</string>
 
+    <!--  Multi-stage timeline  -->
+    <string name="festival_schedule">Festival Schedule</string>
+    <string name="pinch_to_zoom">Pinch to Zoom</string>
+    <string name="zoom_percentage">Zoom %1$s%%</string>
+
 </resources>

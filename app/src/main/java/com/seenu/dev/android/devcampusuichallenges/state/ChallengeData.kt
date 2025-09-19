@@ -31,4 +31,8 @@ private val septemberChallenges
             "Accessible Audio Schedule",
             Route.September4
         ),
+        ChallengeUiModel(
+            "Multi Stage Timeline",
+            Route.September5
+        ),
     )

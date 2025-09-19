@@ -23,6 +23,8 @@ val Orange = Color(0xFFEC9C50)
 val Pink = Color(0xFFF59BB0)
 val Purple = Color(0xFFEEB7FA)
 val Blue = Color(0xFF86DDF8)
+val Overlay = Color(0xBF221513)
+val Outline = Color(0xFFE8DBC3)
 
 val ColorScheme.surfaceHigher
     @Composable get() = SurfaceHigher
@@ -51,6 +53,9 @@ val ColorScheme.purple
 val ColorScheme.blue
     @Composable get() = Blue
 
+val ColorScheme.overlay
+    @Composable get() = Overlay
+
 val Parkinsans = FontFamily(
     Font(R.font.parkinsans_regular, weight = FontWeight.Normal),
     Font(R.font.parkinsans_medium, weight = FontWeight.Medium),
@@ -63,7 +68,8 @@ fun SeptemberTheme(content: @Composable () -> Unit) {
     MaterialTheme(
         colorScheme = MaterialTheme.colorScheme.copy(
             surface = Surface,
-            onSurface = TextPrimary
+            onSurface = TextPrimary,
+            outline = Outline
         ),
         typography = Typography()
     ) {
