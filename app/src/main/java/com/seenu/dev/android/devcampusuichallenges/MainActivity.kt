@@ -1,10 +1,21 @@
 package com.seenu.dev.android.devcampusuichallenges
 
+import android.animation.Animator
+import android.animation.AnimatorInflater
+import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import android.os.Bundle
+import android.view.animation.Animation
+import android.view.animation.Animation.INFINITE
+import android.view.animation.LinearInterpolator
+import android.view.animation.RotateAnimation
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.animation.core.RepeatMode
 import androidx.compose.material3.Surface
+import androidx.core.animation.doOnEnd
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation3.runtime.NavKey
 import androidx.navigation3.runtime.entry
 import androidx.navigation3.runtime.entryProvider
@@ -22,18 +33,28 @@ import com.seenu.dev.android.july25.MessageCardScreen
 import com.seenu.dev.android.june25.BirthdayInviteCardScreen
 import com.seenu.dev.android.september25.AccessibleAudioSchedule
 import com.seenu.dev.android.september25.ExpandableListScreen
-import com.seenu.dev.android.september25.FestivalMap
 import com.seenu.dev.android.september25.MapChipFilterScreen
 import com.seenu.dev.android.september25.MultiStageTimelineScreen
 import com.seenu.dev.android.september25.TicketBuilderScreen
 import com.seenu.dev.android.september25.theme.SeptemberTheme
 
 class MainActivity : ComponentActivity() {
+
+    companion object {
+        private const val SPLASH_DURATION = 5700
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        val startTime = System.currentTimeMillis()
+        val splash = installSplashScreen()
+        splash.setKeepOnScreenCondition {
+            System.currentTimeMillis() - startTime < SPLASH_DURATION
+        }
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            val backstack = rememberNavBackStack<Route>(Route.September5)
+            val backstack = rememberNavBackStack<Route>(Route.ListScreen)
             DevCampusUIChallengesTheme {
                 NavDisplay(backStack = backstack, entryProvider = entryProvider<NavKey> {
                     entry<Route.ListScreen> {

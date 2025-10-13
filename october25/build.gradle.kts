@@ -1,24 +1,18 @@
-import org.gradle.kotlin.dsl.implementation
-
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.jetbrains.kotlin.serialization)
 }
 
 android {
-    namespace = "com.seenu.dev.android.devcampusuichallenges"
+    namespace = "com.seenu.dev.android.october25"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.seenu.dev.android.devcampusuichallenges"
         minSdk = 24
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -43,7 +37,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -61,21 +54,6 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
-    // Navigation 3
-    implementation(libs.androidx.navigation3.ui)
-    implementation(libs.androidx.navigation3.runtime)
-    implementation(libs.androidx.lifecycle.viewmodel.navigation3)
-
-    // Compose Constraint layout
-    implementation(libs.androidx.constraintlayout.compose)
-
-    // Modules
-    implementation(projects.june25)
-    implementation(projects.july25)
-    implementation(projects.august25)
-    implementation(projects.september25)
-    implementation(projects.october25)
 
     // Splash
     implementation(libs.splash.screen)

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@anim/overshoot_interpolator"
+    android:ordering="sequentially">
+
+    <objectAnimator
+        android:duration="1800"
+        android:interpolator="@anim/overshoot_interpolator">
+        <propertyValuesHolder
+            android:propertyName="scaleX"
+            android:valueFrom=".2F"
+            android:valueTo=".5F"
+            android:valueType="floatType" />
+
+        <propertyValuesHolder
+            android:propertyName="scaleY"
+            android:valueFrom=".2F"
+            android:valueTo=".5F"
+            android:valueType="floatType" />
+
+        <propertyValuesHolder
+            android:propertyName="rotation"
+            android:valueFrom="0F"
+            android:valueTo="-720F"
+            android:valueType="floatType" />
+
+    </objectAnimator>
+
+    <objectAnimator
+        android:duration="400"
+        android:interpolator="@anim/overshoot_interpolator"
+        android:propertyName="rotation"
+        android:valueFrom="720F"
+        android:valueTo="705F"
+        android:valueType="floatType" />
+
+    <objectAnimator
+        android:duration="700"
+        android:interpolator="@anim/overshoot_interpolator"
+        android:propertyName="rotation"
+        android:valueFrom="705F"
+        android:valueTo="735F"
+        android:valueType="floatType" />
+
+    <objectAnimator
+        android:duration="400"
+        android:interpolator="@anim/overshoot_interpolator"
+        android:propertyName="rotation"
+        android:valueFrom="-705F"
+        android:valueTo="-720F"
+        android:valueType="floatType" />
+
+    <objectAnimator
+        android:duration="800"
+        android:interpolator="@anim/overshoot_interpolator"
+        android:propertyName="alpha"
+        android:valueFrom="1F"
+        android:valueTo="1F"
+        android:valueType="floatType" />
+
+
+    <objectAnimator
+        android:duration="400"
+        android:interpolator="@anim/overshoot_interpolator">
+
+        <propertyValuesHolder
+            android:propertyName="rotation"
+            android:valueFrom="-720F"
+            android:valueTo="-735F"
+            android:valueType="floatType" />
+
+        <propertyValuesHolder
+            android:propertyName="scaleX"
+            android:valueFrom="0.5F"
+            android:valueTo="0.6F"
+            android:valueType="floatType" />
+
+        <propertyValuesHolder
+            android:propertyName="scaleY"
+            android:valueFrom="0.5F"
+            android:valueTo="0.6F"
+            android:valueType="floatType" />
+    </objectAnimator>
+
+    <objectAnimator
+        android:duration="400"
+        android:interpolator="@anim/overshoot_interpolator">
+
+        <propertyValuesHolder
+            android:propertyName="rotation"
+            android:valueFrom="-735F"
+            android:valueTo="-705F"
+            android:valueType="floatType" />
+
+    </objectAnimator>
+
+    <objectAnimator
+        android:duration="800"
+        android:interpolator="@anim/overshoot_interpolator">
+
+        <propertyValuesHolder
+            android:propertyName="scaleY"
+            android:valueFrom="0.5F"
+            android:valueTo="0F"
+            android:valueType="floatType" />
+
+        <propertyValuesHolder
+            android:propertyName="scaleX"
+            android:valueFrom="0.5F"
+            android:valueTo="0F"
+            android:valueType="floatType" />
+
+    </objectAnimator>
+
+
+</set>
