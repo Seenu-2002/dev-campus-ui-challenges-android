@@ -1,7 +1,7 @@
 [versions]
 agp = "8.10.1"
 constraintlayoutCompose = "1.0.1"
-kotlin = "2.0.21"
+kotlin = "2.2.20"
 coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -16,6 +16,7 @@ uiText = "1.9.0"
 appcompat = "1.7.1"
 material = "1.12.0"
 splash = "1.0.1"
+time = "0.7.1"
 
 [libraries]
 androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
@@ -41,6 +42,8 @@ androidx-ui-text = { group = "androidx.compose.ui", name = "ui-text", version.re
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 splash-screen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splash" }
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "time" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

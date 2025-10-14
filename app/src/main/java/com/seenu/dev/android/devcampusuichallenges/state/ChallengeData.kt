@@ -10,7 +10,20 @@ val months
             "September 2025",
             "Designing the Festival",
             septemberChallenges
-        )
+        ),
+        MonthUiModel(
+            "October 2025",
+            "Android Halloween Lab",
+            octoberChallenges
+        ),
+    )
+
+private val octoberChallenges
+    get() = listOf(
+        ChallengeUiModel(
+            "Cursed Countdown",
+            Route.October3
+        ),
     )
 
 private val septemberChallenges
