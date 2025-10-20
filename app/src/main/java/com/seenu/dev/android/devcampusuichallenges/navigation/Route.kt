@@ -41,5 +41,8 @@ sealed interface Route : NavKey {
     data object September5 : Route
 
     @Serializable
+    data object October2 : Route
+
+    @Serializable
     data object October3 : Route
 }

@@ -14,6 +14,8 @@ import com.seenu.dev.android.october25.R
 val Background = Color(0xFF1A0D39)
 val OutlineInactive = Color(0xFF2C1B53)
 val SkeletonToastBg = Color(0xFFFF934A)
+val Day = Color(0xFFFEEEE2)
+val Night = Color(0xFF4D2EAA)
 
 val colorScheme = lightColorScheme(
     background = Background
@@ -24,6 +26,12 @@ val ColorScheme.outlineInactive: Color
 
 val ColorScheme.skeletonToastBg: Color
     get() = SkeletonToastBg
+
+val ColorScheme.day: Color
+    get() = Day
+
+val ColorScheme.night: Color
+    get() = Night
 
 val RoadRage = FontFamily(
     Font(

@@ -21,6 +21,7 @@ import com.seenu.dev.android.july25.EmojiReactionBubbleScreen
 import com.seenu.dev.android.july25.MessageCardScreen
 import com.seenu.dev.android.june25.BirthdayInviteCardScreen
 import com.seenu.dev.android.october25.CursedCountdown
+import com.seenu.dev.android.october25.HauntedThemeSwitcher
 import com.seenu.dev.android.october25.theme.OctoberTheme
 import com.seenu.dev.android.september25.AccessibleAudioSchedule
 import com.seenu.dev.android.september25.ExpandableListScreen
@@ -124,6 +125,14 @@ class MainActivity : ComponentActivity() {
                         OctoberTheme {
                             Surface {
                                 CursedCountdown()
+                            }
+                        }
+                    }
+
+                    entry<Route.October2> {
+                        OctoberTheme {
+                            Surface {
+                                HauntedThemeSwitcher()
                             }
                         }
                     }

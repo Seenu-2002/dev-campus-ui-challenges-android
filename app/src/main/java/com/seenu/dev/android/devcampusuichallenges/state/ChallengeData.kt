@@ -21,6 +21,10 @@ val months
 private val octoberChallenges
     get() = listOf(
         ChallengeUiModel(
+            "Haunted Theme Switcher",
+            Route.October2
+        ),
+        ChallengeUiModel(
             "Cursed Countdown",
             Route.October3
         ),
