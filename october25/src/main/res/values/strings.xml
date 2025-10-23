@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Coven Booking Desk  -->
+    <string name="coven_booking_desk">COVEN BOOKING DESK</string>
+    <string name="morgana">Morgana</string>
+    <string name="selene">Selene</string>
+    <string name="hecate">Hecate</string>
+    <string name="elvira">Elvira</string>
+    <string name="nyx">Nyx</string>
+    <string name="circe">Circe</string>
+    <string name="choose_arrival_date">Choose Arrival Date</string>
+    <string name="change_arrival_date">Change Date</string>
+    <string name="no_reservation">No reservation</string>
+    <string name="available">Available</string>
+    <string name="reserved">Reserved</string>
+    <string name="reserved_by">Reserved: %1$s</string>
+    <string name="booking_confirmation">Book <b>%1$s</b> for <b>%2$s at %3$s</b>?</string>
+    <string name="book">Book</string>
+    <string name="booked">Booked:</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="october_25">October 2025</string>
+    <string name="november_25">November 2025</string>
+    <string name="time_slots">Time Slots for</string>
+    <string name="booking_confirm_msg">%1$s is booked for the gathering!</string>
+
+</resources>

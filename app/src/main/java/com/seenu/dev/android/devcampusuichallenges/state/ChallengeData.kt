@@ -28,6 +28,10 @@ private val octoberChallenges
             "Cursed Countdown",
             Route.October3
         ),
+        ChallengeUiModel(
+            "Coven Booking Desk",
+            Route.October4
+        ),
     )
 
 private val septemberChallenges

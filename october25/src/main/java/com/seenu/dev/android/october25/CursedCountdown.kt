@@ -39,7 +39,7 @@ import androidx.compose.ui.unit.sp
 import com.seenu.dev.android.october25.theme.OctoberTheme
 import com.seenu.dev.android.october25.theme.RoadRage
 import com.seenu.dev.android.october25.theme.outlineInactive
-import com.seenu.dev.android.october25.theme.skeletonToastBg
+import com.seenu.dev.android.october25.theme.toastBg
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.Calendar
@@ -109,7 +109,7 @@ fun Timer(modifier: Modifier = Modifier) {
     Row(
         modifier = modifier
             .background(
-                color = MaterialTheme.colorScheme.skeletonToastBg,
+                color = MaterialTheme.colorScheme.toastBg,
                 shape = MaterialTheme.shapes.medium
             )
             .padding(vertical = 60.dp, horizontal = 45.dp),
