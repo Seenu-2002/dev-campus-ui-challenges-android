@@ -2,7 +2,7 @@ package com.seenu.dev.android.october25.theme
 
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.lightColorScheme
+import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.Font
@@ -20,13 +20,16 @@ val FrameActive = Color(0xFFD2B5A0)
 val FrameInactive = Color(0xFF7A60B5)
 val OutlineActive = Color(0xFF462F78)
 val OutlineInactive = Color(0xFF2C1B53)
+val OutlineError = Color(0xFFF7406E)
 val Slot = Color(0xFF533E82)
-val SkeletonToastBg = Color(0xFFFF934A)
+val SlotActive = Color(0x33462f78)
 val Day = Color(0xFFFEEEE2)
 val Night = Color(0xFF4D2EAA)
+val BoneColor = Color(0xFFF5F3EF)
+val SurfaceHigher = Color(0x801A0D39)
 
-val colorScheme = lightColorScheme(
-    background = Background
+val colorScheme = darkColorScheme(
+    background = Background,
 )
 
 val ColorScheme.outlineInactive: Color
@@ -64,6 +67,18 @@ val ColorScheme.day: Color
 
 val ColorScheme.night: Color
     get() = Night
+
+val ColorScheme.boneColor: Color
+    get() = BoneColor
+
+val ColorScheme.surfaceHigher: Color
+    get() = SurfaceHigher
+
+val ColorScheme.outlineError: Color
+    get() = OutlineError
+
+val ColorScheme.slotActive: Color
+    get() = SlotActive
 
 val RoadRage = FontFamily(
     Font(

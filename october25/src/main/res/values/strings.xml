@@ -24,4 +24,6 @@
     <string name="time_slots">Time Slots for</string>
     <string name="booking_confirm_msg">%1$s is booked for the gathering!</string>
 
+    <!--  Halloween Skeleton Puzzle   -->
+    <string name="skeleton_is_back">He\'s back… and he remembers everything!</string>
 </resources>

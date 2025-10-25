@@ -24,6 +24,7 @@ import com.seenu.dev.android.october25.CovenBookingDesk
 import com.seenu.dev.android.october25.CursedCountdown
 import com.seenu.dev.android.october25.HauntedThemeSwitcher
 import com.seenu.dev.android.october25.theme.OctoberTheme
+import com.seenu.dev.android.october25.HalloweenSkeletonPuzzle
 import com.seenu.dev.android.september25.AccessibleAudioSchedule
 import com.seenu.dev.android.september25.ExpandableListScreen
 import com.seenu.dev.android.september25.MapChipFilterScreen
@@ -47,7 +48,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            val backstack = rememberNavBackStack<Route>(Route.October4)
+            val backstack = rememberNavBackStack<Route>(Route.ListScreen)
             DevCampusUIChallengesTheme {
                 NavDisplay(backStack = backstack, entryProvider = entryProvider<NavKey> {
                     entry<Route.ListScreen> {
@@ -142,6 +143,14 @@ class MainActivity : ComponentActivity() {
                         OctoberTheme {
                             Surface {
                                 CovenBookingDesk()
+                            }
+                        }
+                    }
+
+                    entry<Route.October5> {
+                        OctoberTheme {
+                            Surface {
+                                HalloweenSkeletonPuzzle()
                             }
                         }
                     }

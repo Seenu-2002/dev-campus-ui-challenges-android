@@ -58,4 +58,7 @@ dependencies {
 
     // Kotlinx-datetime
     implementation(libs.kotlinx.datetime)
+
+    // Compose Constraint layout
+    implementation(libs.androidx.constraintlayout.compose)
 }

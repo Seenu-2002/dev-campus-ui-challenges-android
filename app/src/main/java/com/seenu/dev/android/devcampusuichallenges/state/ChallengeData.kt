@@ -32,6 +32,10 @@ private val octoberChallenges
             "Coven Booking Desk",
             Route.October4
         ),
+        ChallengeUiModel(
+            "Halloween Skeleton Puzzle",
+            Route.October5
+        ),
     )
 
 private val septemberChallenges
