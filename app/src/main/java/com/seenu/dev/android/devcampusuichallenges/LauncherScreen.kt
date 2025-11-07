@@ -23,8 +23,11 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
@@ -37,7 +40,7 @@ fun LauncherScreen(
     months: List<MonthUiModel>,
     onChallengeClick: (ChallengeUiModel) -> Unit
 ) {
-    val expandedMonth = remember { mutableStateOf<String?>(null) }
+    var expandedMonth by rememberSaveable { mutableStateOf<String?>(null) }
 
     Scaffold(
         topBar = {
@@ -52,9 +55,9 @@ fun LauncherScreen(
             items(months) { month ->
                 MonthCard(
                     month = month,
-                    isExpanded = expandedMonth.value == month.name,
+                    isExpanded = expandedMonth == month.name,
                     onExpandToggle = {
-                        expandedMonth.value = if (expandedMonth.value == month.name) null else month.name
+                        expandedMonth = if (expandedMonth == month.name) null else month.name
                     },
                     onChallengeClick = onChallengeClick
                 )

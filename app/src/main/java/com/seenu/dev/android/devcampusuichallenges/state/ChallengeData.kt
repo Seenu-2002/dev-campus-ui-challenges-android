@@ -1,20 +1,34 @@
 package com.seenu.dev.android.devcampusuichallenges.state
 
-import androidx.compose.runtime.Composable
 import com.seenu.dev.android.devcampusuichallenges.navigation.Route
 
 
 val months
     get() = listOf(
         MonthUiModel(
+            "October 2025",
+            "Android Halloween Lab",
+            octoberChallenges
+        ),
+        MonthUiModel(
             "September 2025",
             "Designing the Festival",
             septemberChallenges
         ),
         MonthUiModel(
-            "October 2025",
-            "Android Halloween Lab",
-            octoberChallenges
+            "August 2025",
+            "Async Adventures",
+            augustChallenges
+        ),
+        MonthUiModel(
+            "July 2025",
+            "Conversations",
+            julyChallenges
+        ),
+        MonthUiModel(
+            "June 2025",
+            "Birthday Celebrations",
+            juneChallenges
         ),
     )
 
@@ -60,4 +74,40 @@ private val septemberChallenges
             "Multi Stage Timeline",
             Route.September5
         ),
+    )
+
+private val augustChallenges
+    get() = listOf(
+        ChallengeUiModel(
+            "Thermometer Trek",
+            Route.August1
+        ),
+        ChallengeUiModel(
+            "Order Queue Outpost",
+            Route.August2
+        ),
+    )
+
+private val julyChallenges
+    get() = listOf(
+        ChallengeUiModel(
+            "Emoji Reaction Bubble",
+            Route.July
+        ),
+        ChallengeUiModel(
+            "Bottom Navigation with Unread Badge",
+            Route.July2
+        ),
+        ChallengeUiModel(
+            "Message Card",
+            Route.July3
+        ),
+    )
+
+private val juneChallenges
+    get() = listOf(
+        ChallengeUiModel(
+            "Birthday Invitation Card",
+            Route.June
+        )
     )

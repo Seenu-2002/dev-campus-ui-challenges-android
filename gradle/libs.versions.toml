@@ -18,6 +18,7 @@ material = "1.12.0"
 splash = "1.0.1"
 time = "0.7.1"
 viewmodel = "2.9.4"
+coil = "3.3.0"
 
 [libraries]
 androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
@@ -45,6 +46,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 splash-screen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splash" }
 kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "time" }
 compose-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "viewmodel" }
+coil3 = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

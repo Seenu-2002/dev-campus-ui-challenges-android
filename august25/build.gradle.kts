@@ -61,4 +61,7 @@ dependencies {
 
     // Compose Constraint layout
     implementation(libs.androidx.constraintlayout.compose)
+
+    // Coil
+    implementation(libs.coil3)
 }
