@@ -43,6 +43,14 @@ private val novemberChallenges
             "Hidden Discount Swipe",
             Route.November1
         ),
+        ChallengeUiModel(
+            "Sticky Ad Banner",
+            Route.November2
+        ),
+        ChallengeUiModel(
+            "Circular Stock Tracker",
+            Route.November3
+        ),
     )
 
 private val octoberChallenges

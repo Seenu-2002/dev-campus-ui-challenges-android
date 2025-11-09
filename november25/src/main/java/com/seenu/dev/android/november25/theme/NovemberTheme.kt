@@ -17,6 +17,7 @@ val Surface = Color(0xFFFFFFFF)
 val Outline = Color(0xFFDFDDDB)
 val OutlineAlt = Color(0x33FFFFFF)
 val TextPrimary = Color(0xFF211304)
+val TextSecondary = Color(0xFF6B5D4F)
 val TextDisabled = Color(0xFF9A9795)
 val TextAlt = Color(0xFFFFFFFF)
 val TextOnDiscount = Color(0xB3FFFFFF)
@@ -36,6 +37,9 @@ val ColorScheme.outlineAlt: Color
 
 val ColorScheme.textPrimary: Color
     get() = TextPrimary
+
+val ColorScheme.textSecondary: Color
+    get() = TextSecondary
 
 val ColorScheme.textDisabled: Color
     get() = TextDisabled
