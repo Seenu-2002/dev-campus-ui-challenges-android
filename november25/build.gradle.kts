@@ -1,24 +1,18 @@
-import org.gradle.kotlin.dsl.implementation
-
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.jetbrains.kotlin.serialization)
 }
 
 android {
-    namespace = "com.seenu.dev.android.devcampusuichallenges"
+    namespace = "com.seenu.dev.android.november25"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.seenu.dev.android.devcampusuichallenges"
         minSdk = 24
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -66,15 +60,4 @@ dependencies {
 
     // Compose Constraint layout
     implementation(libs.androidx.constraintlayout.compose)
-
-    // Modules
-    implementation(projects.june25)
-    implementation(projects.july25)
-    implementation(projects.august25)
-    implementation(projects.september25)
-    implementation(projects.october25)
-    implementation(projects.november25)
-
-    // Splash
-    implementation(libs.splash.screen)
 }

@@ -14,11 +14,12 @@ import com.seenu.dev.android.devcampusuichallenges.navigation.month.SeptemberNav
 import com.seenu.dev.android.devcampusuichallenges.navigation.month.JuneNavigation
 import com.seenu.dev.android.devcampusuichallenges.navigation.month.JulyNavigation
 import com.seenu.dev.android.devcampusuichallenges.navigation.month.AugustNavigation
+import com.seenu.dev.android.devcampusuichallenges.navigation.month.NovemberNavigation
 import com.seenu.dev.android.devcampusuichallenges.state.months
 
 @Composable
 fun RootNavigation(modifier: Modifier = Modifier) {
-    val backstack = rememberNavBackStack<Route>(Route.ListScreen)
+    val backstack = rememberNavBackStack<Route>(Route.November1)
     NavDisplay(
         modifier = modifier,
         backStack = backstack,
@@ -40,5 +41,10 @@ fun RootNavigation(modifier: Modifier = Modifier) {
             AugustNavigation()
             SeptemberNavigation()
             OctoberNavigation()
+            NovemberNavigation(onNavigateBack = {
+                backstack.lastOrNull()?.let {
+                    backstack.remove(it)
+                }
+            })
         })
 }

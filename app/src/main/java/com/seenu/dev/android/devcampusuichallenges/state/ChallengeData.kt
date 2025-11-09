@@ -6,6 +6,11 @@ import com.seenu.dev.android.devcampusuichallenges.navigation.Route
 val months
     get() = listOf(
         MonthUiModel(
+            "November 2025",
+            "Black Friday Madness",
+            novemberChallenges
+        ),
+        MonthUiModel(
             "October 2025",
             "Android Halloween Lab",
             octoberChallenges
@@ -29,6 +34,14 @@ val months
             "June 2025",
             "Birthday Celebrations",
             juneChallenges
+        ),
+    )
+
+private val novemberChallenges
+    get() = listOf(
+        ChallengeUiModel(
+            "Hidden Discount Swipe",
+            Route.November1
         ),
     )
 
