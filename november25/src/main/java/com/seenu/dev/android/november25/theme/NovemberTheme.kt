@@ -23,14 +23,13 @@ val TextOnDiscount = Color(0xB3FFFFFF)
 val Discount = Color(0xFF7C1414)
 val SnackBar = Color(0xB3211304)
 
-val lightColorScheme = lightColorScheme(
+private val lightColorScheme = lightColorScheme(
     background = Background,
     outline = Outline,
     surface = Surface,
     onSurface = TextPrimary,
     onBackground = TextPrimary,
 )
-
 
 val ColorScheme.outlineAlt: Color
     get() = OutlineAlt
