@@ -51,6 +51,10 @@ private val novemberChallenges
             "Circular Stock Tracker",
             Route.November3
         ),
+        ChallengeUiModel(
+            "Global Black Friday Deals",
+            Route.November5
+        ),
     )
 
 private val octoberChallenges
