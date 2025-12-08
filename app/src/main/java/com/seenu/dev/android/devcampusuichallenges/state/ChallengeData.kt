@@ -52,6 +52,10 @@ private val novemberChallenges
             Route.November3
         ),
         ChallengeUiModel(
+            "Long Press Compare Products",
+            Route.November4
+        ),
+        ChallengeUiModel(
             "Global Black Friday Deals",
             Route.November5
         ),

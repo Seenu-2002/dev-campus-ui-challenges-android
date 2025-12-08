@@ -65,5 +65,14 @@ sealed interface Route : NavKey {
     data object November3 : Route
 
     @Serializable
+    data object November4 : Route
+
+    @Serializable
+    data class November4CompareScreen constructor(
+        val product1Id: String,
+        val product2Id: String
+    ) : Route
+
+    @Serializable
     data object November5 : Route
 }
