@@ -74,6 +74,7 @@ dependencies {
     implementation(projects.september25)
     implementation(projects.october25)
     implementation(projects.november25)
+    implementation(projects.december25)
 
     // Splash
     implementation(libs.splash.screen)

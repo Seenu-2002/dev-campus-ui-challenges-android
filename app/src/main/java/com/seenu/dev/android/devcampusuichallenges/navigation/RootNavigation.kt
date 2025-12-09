@@ -14,6 +14,7 @@ import com.seenu.dev.android.devcampusuichallenges.navigation.month.SeptemberNav
 import com.seenu.dev.android.devcampusuichallenges.navigation.month.JuneNavigation
 import com.seenu.dev.android.devcampusuichallenges.navigation.month.JulyNavigation
 import com.seenu.dev.android.devcampusuichallenges.navigation.month.AugustNavigation
+import com.seenu.dev.android.devcampusuichallenges.navigation.month.DecemberNavigation
 import com.seenu.dev.android.devcampusuichallenges.navigation.month.NovemberNavigation
 import com.seenu.dev.android.devcampusuichallenges.state.months
 
@@ -46,5 +47,6 @@ fun RootNavigation(modifier: Modifier = Modifier) {
                     backstack.remove(it)
                 }
             })
+            DecemberNavigation()
         })
 }
