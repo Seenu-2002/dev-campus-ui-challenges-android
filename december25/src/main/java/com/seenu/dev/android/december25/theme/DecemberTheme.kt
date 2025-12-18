@@ -14,7 +14,9 @@ val Background = Color(0xFFDFE0DF)
 val Title = Color(0xFF00369A)
 val KeyHoverGradientStart = Color(0xFFD0FFFD)
 val KeyHoverGradientEnd = Color(0xFF88B5F4)
-
+val GlobeGradientStart = Color(0xFFE1ECFF)
+val GlobeGradientMiddle = Color(0xFFE0E0FF)
+val GlobeGradientEnd = Color(0xFFDCBFF9)
 val ColorScheme.title: Color
     get() = Title
 
@@ -24,8 +26,18 @@ val ColorScheme.keyHoverGradientStart: Color
 val ColorScheme.keyHoverGradientEnd: Color
     get() = KeyHoverGradientEnd
 
+val ColorScheme.globeGradientStart: Color
+    get() = GlobeGradientStart
+
+val ColorScheme.globeGradientMiddle: Color
+    get() = GlobeGradientMiddle
+
+val ColorScheme.globeGradientEnd: Color
+    get() = GlobeGradientEnd
+
 val Montserrat = FontFamily(
     Font(R.font.montserrat_regular, FontWeight.Normal),
+    Font(R.font.montserrat_medium, FontWeight.Medium),
     Font(R.font.montserrat_semibold, FontWeight.SemiBold),
     Font(R.font.montserrat_bold, FontWeight.Bold)
 )

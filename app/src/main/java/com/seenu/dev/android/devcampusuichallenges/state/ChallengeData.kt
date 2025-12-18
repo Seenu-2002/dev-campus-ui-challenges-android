@@ -47,6 +47,14 @@ private val decemberChallenges
         ChallengeUiModel(
             "Santa Clap Piano",
             Route.December2
+        ),
+        ChallengeUiModel(
+            "Snow Globe Shake",
+            Route.December3
+        ),
+        ChallengeUiModel(
+            "Holiday Cashback Activation",
+            Route.December4
         )
     )
 
