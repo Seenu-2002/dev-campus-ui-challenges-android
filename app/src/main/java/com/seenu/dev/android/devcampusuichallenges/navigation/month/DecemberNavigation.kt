@@ -8,6 +8,7 @@ import com.seenu.dev.android.december25.HolidayCashbackActivation
 import com.seenu.dev.android.december25.theme.DecemberTheme
 import com.seenu.dev.android.december25.SantaClapPiano
 import com.seenu.dev.android.december25.SnowGlobeShake
+import com.seenu.dev.android.december25.WinterGreetingEditor
 import com.seenu.dev.android.devcampusuichallenges.navigation.Route
 
 @Composable
@@ -25,6 +26,11 @@ fun EntryProviderBuilder<NavKey>.DecemberNavigation() {
     entry<Route.December4> {
         DecemberTheme {
             HolidayCashbackActivation()
+        }
+    }
+    entry<Route.December5> {
+        DecemberTheme {
+            WinterGreetingEditor()
         }
     }
 }

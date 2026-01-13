@@ -3,16 +3,20 @@ package com.seenu.dev.android.june25
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -27,28 +31,50 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.seenu.dev.android.june25.theme.Mali
 import com.seenu.dev.android.june25.theme.Nunito
 
 @Composable
 fun BirthdayInviteCardScreen() {
-    Box(
+    BoxWithConstraints(
         modifier = Modifier
             .fillMaxSize()
             .background(color = Color(0xFF1A597B)),
         contentAlignment = Alignment.Center
     ) {
 
+        val dimension = remember(maxWidth) {
+            if (maxWidth >= 600.dp) {
+                InviteCardDimensions(
+                    titleFontSize = 60,
+                    subTitleFontSize = 34,
+                    fieldLabelFontSize = 34,
+                    fieldValueFontSize = 34,
+                    rsvpFontSize = 26
+                )
+            } else {
+                InviteCardDimensions()
+            }
+        }
+
         BirthdayInviteCard(
-            modifier = Modifier.fillMaxWidth(.95F)
+            dimension = dimension,
+            modifier = Modifier
+                .sizeIn(maxWidth = 640.dp, maxHeight = 800.dp)
+                .fillMaxWidth(.95F)
+                .fillMaxHeight()
         )
 
     }
 }
 
 @Composable
-fun BirthdayInviteCard(modifier: Modifier = Modifier) {
+private fun BirthdayInviteCard(
+    dimension: InviteCardDimensions = InviteCardDimensions(),
+    modifier: Modifier = Modifier
+) {
     val shape = RoundedCornerShape(16.dp)
 
     ConstraintLayout(
@@ -81,20 +107,33 @@ fun BirthdayInviteCard(modifier: Modifier = Modifier) {
                 style = MaterialTheme.typography.headlineLarge,
                 fontFamily = Mali,
                 fontWeight = FontWeight.Bold,
+                fontSize = dimension.titleFontSize.sp
             )
             Text(
                 text = "Join us for a birthday bash \uD83C\uDF89",
                 style = MaterialTheme.typography.bodyLarge,
                 fontFamily = Mali,
                 fontWeight = FontWeight.SemiBold,
+                fontSize = dimension.subTitleFontSize.sp
             )
             Spacer(modifier = Modifier.height(30.dp))
-            Text(text = getAnnotatedString(name = "Date", "June 14, 2025"), style = MaterialTheme.typography.bodyMedium, fontFamily = Nunito)
-            Text(text = getAnnotatedString(name = "Time", "3.00 PM"), fontFamily = Nunito)
+            Text(
+                text = getAnnotatedString(name = "Date", "June 14, 2025"),
+                style = MaterialTheme.typography.bodyMedium,
+                fontFamily = Nunito,
+                fontSize = dimension.fieldValueFontSize.sp
+            )
+            Text(
+                text = getAnnotatedString(name = "Time", "3.00 PM"),
+                fontFamily = Nunito,
+                fontSize = dimension.fieldValueFontSize.sp
+            )
             Text(
                 text = getAnnotatedString(name = "Location", "Party Central, 123 Celebration Lane"),
                 fontFamily = Nunito,
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
+                fontSize = dimension.fieldValueFontSize.sp,
+                lineHeight = (dimension.fieldValueFontSize * 1.2).sp
             )
         }
 
@@ -106,7 +145,8 @@ fun BirthdayInviteCard(modifier: Modifier = Modifier) {
             },
             text = "RSVP by June 9",
             style = MaterialTheme.typography.bodyMedium,
-            fontFamily = Nunito
+            fontFamily = Nunito,
+            fontSize = dimension.rsvpFontSize.sp
         )
 
     }
@@ -144,3 +184,11 @@ private fun getAnnotatedString(name: String, value: String): AnnotatedString {
         pop()
     }
 }
+
+data class InviteCardDimensions constructor(
+    val titleFontSize: Int = 36,
+    val subTitleFontSize: Int = 21,
+    val fieldLabelFontSize: Int = 21,
+    val fieldValueFontSize: Int = 21,
+    val rsvpFontSize: Int = 16
+)

@@ -42,6 +42,11 @@ val Montserrat = FontFamily(
     Font(R.font.montserrat_bold, FontWeight.Bold)
 )
 
+val PTSans = FontFamily(
+    Font(R.font.ptsand_regular, FontWeight.Normal),
+    Font(R.font.ptsans_bold, FontWeight.Bold)
+)
+
 @Composable
 fun DecemberTheme(content: @Composable () -> Unit) {
     MaterialTheme(
