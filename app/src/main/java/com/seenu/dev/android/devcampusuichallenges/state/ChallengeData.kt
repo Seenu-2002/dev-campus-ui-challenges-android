@@ -54,6 +54,10 @@ private val januaryChallenges
             Route.January1
         ),
         ChallengeUiModel(
+            "Fresh Start Settings",
+            Route.January2
+        ),
+        ChallengeUiModel(
             "Profile Avatar Editor",
             Route.January5
         )

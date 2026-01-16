@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.animation.core)
     implementation(libs.androidx.ui.text)
+    implementation(libs.androidx.compose.ui.geometry)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -62,4 +63,6 @@ dependencies {
     // Coil
     implementation(libs.coil3)
     implementation(libs.coil3.okhttp)
+    // Data store
+    implementation(libs.androidx.data.store.preferences)
 }

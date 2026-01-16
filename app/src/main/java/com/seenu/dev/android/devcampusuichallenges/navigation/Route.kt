@@ -97,6 +97,9 @@ sealed interface Route : NavKey {
     data class January1_1 constructor(val destination: Destination) : Route
 
     @Serializable
+    data object January2: Route
+
+    @Serializable
     data object January5 : Route
 
     @Serializable

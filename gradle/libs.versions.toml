@@ -20,6 +20,8 @@ time = "0.7.1"
 viewmodel = "2.9.4"
 coil = "3.3.0"
 runtime = "1.10.0"
+uiGeometry = "1.10.0"
+data-store = "1.2.0"
 
 [libraries]
 androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
@@ -50,6 +52,8 @@ compose-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-
 coil3 = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
 coil3-okhttp = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coil" }
 androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime", version.ref = "runtime" }
+androidx-compose-ui-geometry = { group = "androidx.compose.ui", name = "ui-geometry", version.ref = "uiGeometry" }
+androidx-data-store-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "data-store" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
