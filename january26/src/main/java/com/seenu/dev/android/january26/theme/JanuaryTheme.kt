@@ -11,16 +11,16 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import com.seenu.dev.android.january26.R
 
-val BgMainGradientStart = Color(0xFFDAEEFF)
-val BgMainGradientEnd = Color(0xFFEDF7FF)
-val BgGallery = Color(0xFFFFFFFF)
-val BgErrorGradientStart = Color(0xFFFFE9EE)
-val BgErrorGradientEnd = Color(0xFFFFFBFC)
-val TextPrimary = Color(0xFF001221)
-val TextCard = Color(0xFFFFFFFF)
-val OutlineBtn = Color(0xFFC9D0D8)
-val Primary = Color(0xFF5799FC)
-val Error = Color(0xFFF7164B)
+private val BgMainGradientStart = Color(0xFFDAEEFF)
+private val BgMainGradientEnd = Color(0xFFEDF7FF)
+private val BgGallery = Color(0xFFFFFFFF)
+private val BgErrorGradientStart = Color(0xFFFFE9EE)
+private val BgErrorGradientEnd = Color(0xFFFFFBFC)
+private val TextPrimary = Color(0xFF001221)
+private val TextCard = Color(0xFFFFFFFF)
+private val OutlineBtn = Color(0xFFC9D0D8)
+private val Primary = Color(0xFF5799FC)
+private val Error = Color(0xFFF7164B)
 
 val ColorScheme.bgMainGradientStart: Color
     get() = BgMainGradientStart

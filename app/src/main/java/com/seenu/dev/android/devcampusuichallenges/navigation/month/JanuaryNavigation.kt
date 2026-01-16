@@ -1,14 +1,26 @@
 package com.seenu.dev.android.devcampusuichallenges.navigation.month
 
+import android.net.Uri
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.navigation3.runtime.EntryProviderBuilder
 import androidx.navigation3.runtime.NavBackStack
 import androidx.navigation3.runtime.NavKey
 import androidx.navigation3.runtime.entry
 import com.seenu.dev.android.devcampusuichallenges.navigation.Route
+import com.seenu.dev.android.january26.profile_avatar_editor.ProfileAvatarEditor
 import com.seenu.dev.android.january26.WinterTravelGallery
 import com.seenu.dev.android.january26.WinterTravelGalleryDetail
+import com.seenu.dev.android.january26.profile_avatar_editor.AvatarEditorScreen
 import com.seenu.dev.android.january26.theme.JanuaryTheme
+import com.seenu.dev.android.january26.theme.ProfileAvatarEditorTheme
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.launch
 
 @Composable
 fun EntryProviderBuilder<NavKey>.JanuaryNavigation(
@@ -28,6 +40,30 @@ fun EntryProviderBuilder<NavKey>.JanuaryNavigation(
             WinterTravelGalleryDetail(
                 destination = it.destination,
                 onBack = onNavigateBack
+            )
+        }
+    }
+
+
+    var isImageUpdatedFlag: Any? by remember { mutableStateOf(null) }
+
+    entry<Route.January5> {
+        ProfileAvatarEditorTheme {
+            ProfileAvatarEditor(isImageUpdatedFlag, openEditorScreen = {
+                backStack.add(Route.January5_1(Uri.encode(it.toString())))
+            })
+        }
+    }
+
+    entry<Route.January5_1> {
+        ProfileAvatarEditorTheme {
+            AvatarEditorScreen(
+                uri = it.uri,
+                onBack = onNavigateBack,
+                onImageSaved = {
+                    isImageUpdatedFlag = Any()
+                    onNavigateBack()
+                }
             )
         }
     }

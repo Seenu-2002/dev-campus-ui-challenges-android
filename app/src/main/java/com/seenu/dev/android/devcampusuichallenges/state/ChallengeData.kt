@@ -53,6 +53,10 @@ private val januaryChallenges
             "Winter Travel Gallery",
             Route.January1
         ),
+        ChallengeUiModel(
+            "Profile Avatar Editor",
+            Route.January5
+        )
     )
 
 private val decemberChallenges

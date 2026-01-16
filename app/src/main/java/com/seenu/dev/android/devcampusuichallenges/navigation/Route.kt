@@ -1,5 +1,6 @@
 package com.seenu.dev.android.devcampusuichallenges.navigation
 
+import android.net.Uri
 import androidx.navigation3.runtime.NavKey
 import com.seenu.dev.android.january26.state.Destination
 import kotlinx.serialization.Serializable
@@ -94,4 +95,10 @@ sealed interface Route : NavKey {
 
     @Serializable
     data class January1_1 constructor(val destination: Destination) : Route
+
+    @Serializable
+    data object January5 : Route
+
+    @Serializable
+    data class January5_1 constructor(val uri: String) : Route
 }
