@@ -58,6 +58,10 @@ private val januaryChallenges
             Route.January2
         ),
         ChallengeUiModel(
+            "Holiday Movie Collection",
+            Route.January3
+        ),
+        ChallengeUiModel(
             "January Recipe Refresh",
             Route.January4
         ),

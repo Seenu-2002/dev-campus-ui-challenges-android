@@ -2,7 +2,9 @@ package com.seenu.dev.android.devcampusuichallenges.navigation
 
 import android.net.Uri
 import androidx.navigation3.runtime.NavKey
+import com.seenu.dev.android.january26.holiday_movie_collection.data.entity.CollectionWithMovie
 import com.seenu.dev.android.january26.state.Destination
+import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -98,6 +100,15 @@ sealed interface Route : NavKey {
 
     @Serializable
     data object January2: Route
+
+    @Serializable
+    data object January3 : Route
+
+    @Serializable
+    data object January3_1: Route
+
+    @Serializable
+    data class January3_2 constructor(@Contextual val collectionWithMovie: CollectionWithMovie) : Route
 
     @Serializable
     data object January4 : Route
