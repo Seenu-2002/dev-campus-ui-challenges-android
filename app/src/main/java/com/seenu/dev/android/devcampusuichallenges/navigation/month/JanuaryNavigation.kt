@@ -15,8 +15,10 @@ import com.seenu.dev.android.january26.fresh_start_settings.FreshStartSettings
 import com.seenu.dev.android.january26.profile_avatar_editor.ProfileAvatarEditor
 import com.seenu.dev.android.january26.WinterTravelGallery
 import com.seenu.dev.android.january26.WinterTravelGalleryDetail
+import com.seenu.dev.android.january26.january_recipe_refresh.JanuaryRecipeRefresh
 import com.seenu.dev.android.january26.profile_avatar_editor.AvatarEditorScreen
 import com.seenu.dev.android.january26.theme.FreshStartSettingsTheme
+import com.seenu.dev.android.january26.theme.JanuaryRecipeRefreshTheme
 import com.seenu.dev.android.january26.theme.JanuaryTheme
 import com.seenu.dev.android.january26.theme.ProfileAvatarEditorTheme
 
@@ -45,6 +47,12 @@ fun EntryProviderBuilder<NavKey>.JanuaryNavigation(
     entry<Route.January2> {
         FreshStartSettingsTheme {
             FreshStartSettings(onBack = onNavigateBack)
+        }
+    }
+
+    entry<Route.January4> {
+        JanuaryRecipeRefreshTheme {
+            JanuaryRecipeRefresh()
         }
     }
 
