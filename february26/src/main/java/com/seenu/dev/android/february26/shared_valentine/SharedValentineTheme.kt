@@ -1,4 +1,4 @@
-package com.seenu.dev.android.february26
+package com.seenu.dev.android.february26.shared_valentine
 
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
@@ -8,6 +8,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import com.seenu.dev.android.february26.R
 
 val StackSans = FontFamily(
     Font(R.font.stack_sans_regular, weight = FontWeight.Normal),

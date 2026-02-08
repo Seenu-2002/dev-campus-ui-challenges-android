@@ -1,3 +1,4 @@
+import org.codehaus.groovy.runtime.ArrayTypeUtils.dimension
 import org.gradle.kotlin.dsl.implementation
 
 plugins {
@@ -38,6 +39,18 @@ android {
     buildFeatures {
         compose = true
     }
+
+    flavorDimensions += "env"
+    productFlavors {
+        create("version_1") {
+            dimension = "env"
+        }
+        create("version_2") {
+            dimension = "env"
+            applicationIdSuffix = ".v2"
+            name
+        }
+    }
 }
 
 dependencies {
@@ -77,6 +90,7 @@ dependencies {
     implementation(projects.november25)
     implementation(projects.december25)
     implementation(projects.january26)
+    implementation(projects.february26)
 
     // Splash
     implementation(libs.splash.screen)

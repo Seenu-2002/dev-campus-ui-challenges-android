@@ -25,4 +25,11 @@
         </activity>
     </application>
 
+    <queries>
+        <intent>
+            <action android:name="com.seenu.dev.android.devcampusuichallenges.RECEIVE_VALENTINE_GIFT" />
+            <data android:mimeType="text/plain" />
+        </intent>
+    </queries>
+
 </manifest>

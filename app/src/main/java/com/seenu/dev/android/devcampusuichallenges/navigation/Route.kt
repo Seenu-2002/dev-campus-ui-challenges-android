@@ -2,6 +2,7 @@ package com.seenu.dev.android.devcampusuichallenges.navigation
 
 import android.net.Uri
 import androidx.navigation3.runtime.NavKey
+import com.seenu.dev.android.february26.shared_valentine.components.ValentineGift
 import com.seenu.dev.android.january26.holiday_movie_collection.data.entity.CollectionWithMovie
 import com.seenu.dev.android.january26.state.Destination
 import kotlinx.serialization.Contextual
@@ -120,5 +121,12 @@ sealed interface Route : NavKey {
     data class January5_1 constructor(val uri: String) : Route
 
     @Serializable
-    data object February4 : Route
+    data object SharedValentineTypeChooser : Route
+
+    @Serializable
+    data object SharedValentineSender : Route
+
+    @Serializable
+    data class SharedValentineReceiver(val receivedGift: ValentineGift?) : Route
+
 }

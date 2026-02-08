@@ -21,8 +21,13 @@ import com.seenu.dev.android.devcampusuichallenges.navigation.month.NovemberNavi
 import com.seenu.dev.android.devcampusuichallenges.state.months
 
 @Composable
-fun RootNavigation(modifier: Modifier = Modifier) {
-    val backstack = rememberNavBackStack<Route>(Route.ListScreen)
+fun RootNavigation(routes: List<Route> = emptyList(), modifier: Modifier = Modifier) {
+    val backstack = rememberNavBackStack<Route>()
+    if (routes.isEmpty()) {
+        backstack.add(Route.ListScreen)
+    } else {
+        routes.forEach { backstack.add(it) }
+    }
     NavDisplay(
         modifier = modifier,
         backStack = backstack,
